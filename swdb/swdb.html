@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars</title>
+    <script src="swdb.js"></script>
+    <link rel="stylesheet" href="swdbStyles.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>Star Wars database</h1>
+
+    </div>
+    <div class="botones oculto">
+        <h3>Choose a category</h3>
+        <button>Characters</button>
+        <button>Creatures</button>
+        <button>Droids</button>
+        <button>Locations</button>
+        <button>Organizations</button>
+        <button>Species</button>
+        <button>Vehicles</button>
+        <h3 class="load oculto">Loading...</h3>
+    </div>
+    <div class="contSelec oculto">
+        <button class="all">Show all</button>
+        <p>&nbsp;&nbsp;or&nbsp;&nbsp;</p>   
+        <input type="text" name="buscar" list="busqueda">
+        <datalist id="busqueda">
+        </datalist>
+    </div>
+    <div class="contTabla">
+
+    </div>
+
+</body>
+
+</html>

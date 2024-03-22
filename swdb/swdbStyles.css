@@ -1,0 +1,73 @@
+body {
+  max-width: 1440px;
+  background-color: black;
+  color: yellow;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 60px;
+}
+
+h1,
+h3,
+.botones {
+  text-align: center;
+
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.botones {
+  margin-bottom: 60px;
+}
+
+button {
+  background-color: bisque;
+  font-weight: bold;
+  padding: 0 5px;
+  margin: 5px;
+}
+
+.contTabla {
+  margin: 20px auto;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+td {
+  padding: 5px;
+}
+
+thead {
+  height: 60px;
+}
+
+th {
+  cursor: pointer;
+  padding: 4px;
+  font-size: 30px;
+}
+
+.contSelec {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.oculto {
+  display: none;
+}
+
+input {
+  max-width: 200px;
+}
