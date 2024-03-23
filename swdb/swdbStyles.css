@@ -1,22 +1,36 @@
 body {
+  min-width: 350px;
+  min-height: 600px;
   max-width: 1440px;
   background-color: black;
   color: yellow;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 100px;
 }
 
-h1 {
-  font-size: 50px;
-  margin-bottom: 60px;
+.oculto {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
 }
 
 h1,
 h3,
 .botones {
   text-align: center;
-
 }
 
-.header {
+h1 {
+  font-size: 40px;
+}
+
+header {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -24,6 +38,20 @@ h3,
   align-items: center;
 }
 
+thead {
+  height: 60px;
+}
+th {
+  cursor: pointer;
+  padding: 4px;
+  font-size: 18px;
+  width: 33%;
+}
+
+.contTabla {
+  
+  width: 100%;
+}
 .botones {
   margin-bottom: 60px;
 }
@@ -35,39 +63,47 @@ button {
   margin: 5px;
 }
 
-.contTabla {
-  margin: 20px auto;
-  width: 100%;
-}
-
-img {
-  max-width: 100%;
-}
-
-td {
-  padding: 5px;
-}
-
-thead {
-  height: 60px;
-}
-
-th {
-  cursor: pointer;
-  padding: 4px;
-  font-size: 30px;
-}
-
 .contSelec {
   display: flex;
   justify-content: center;
   margin: 0 auto;
 }
 
-.oculto {
-  display: none;
-}
+
 
 input {
   max-width: 200px;
 }
+tbody {
+  margin: 0 5%;
+}
+tbody > tr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 300%;
+  margin-bottom: 15px;
+}
+h4 {
+  font-size: 20px;
+  margin: 0;
+}
+td {
+  padding: 3%;
+  text-align: center;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+  td {
+    padding: 3% 5%;
+  }
+}
+

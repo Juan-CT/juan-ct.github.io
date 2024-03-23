@@ -139,14 +139,16 @@ document.addEventListener('DOMContentLoaded', function () {
 				trH.appendChild(crearNodo('th', 'Name'));
 				trH.appendChild(crearNodo('th', 'Description'));
 				trH.appendChild(crearNodo('th', 'Photo'));
+				const tbody = crearNodo('tbody');
 				const trD = crearNodo('tr');
-				trD.appendChild(crearNodo('td', dato[0].name));
+				trD.appendChild(crearNodo('h4', dato[0].name));
 				trD.appendChild(crearNodo('td', dato[0].description));
 				const img = crearNodo('img');
 				img.setAttribute('src', dato[0].image);
 				trD.appendChild(img);
+				tbody.appendChild(trD);
 				tabla.appendChild(trH);
-				tabla.appendChild(trD);
+				tabla.appendChild(tbody);
 				return tabla;
 			}
 
@@ -167,7 +169,9 @@ document.addEventListener('DOMContentLoaded', function () {
 					const tbody = crearNodo('tbody');
 					datPag.forEach(item => {
 						const tr = crearNodo('tr');
-						const tdName = crearNodo('td', item.name);
+						const tdName = crearNodo('td');
+						const h4Name = crearNodo('h4', item.name)
+						tdName.appendChild(h4Name);
 						const tdDesc = crearNodo('td', item.description);
 						const tdImg = crearNodo('td');
 						const img = crearNodo('img');
@@ -191,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					});
 					const thA = crearNodo('th');
 					thA.appendChild(anterior);
-					const thP = crearNodo('th', `Page ${pagina}`);
+					const thP = crearNodo('th', `Page ${pagina}/${maxPaginas}`);
 					const siguiente = crearNodo('span');
 					pagina < maxPaginas ? siguiente.textContent = "Next page" : "";
 					siguiente.addEventListener('click', () => {
