@@ -10,33 +10,38 @@
 </head>
 
 <body>
+	
 	<header>
 		<h1>Star Wars database</h1>
-
 	</header>
+	
+	<main>
+		<p class="separador"></p>
+		<section class="contBotones oculto">
+			<h3>Choose a category</h3>
+			<div class="botones">
+				<button>Characters</button>
+				<button>Creatures</button>
+				<button>Droids</button>
+				<button>Locations</button>
+				<button>Organizations</button>
+				<button>Species</button>
+				<button>Vehicles</button>
+			</div>
+			<h3 class="load oculto">Loading...</h3>
+		</section>
 
-	<div class="botones oculto">
-		<h3>Choose a category</h3>
-		<button>Characters</button>
-		<button>Creatures</button>
-		<button>Droids</button>
-		<button>Locations</button>
-		<button>Organizations</button>
-		<button>Species</button>
-		<button>Vehicles</button>
-		<h3 class="load oculto">Loading...</h3>
-	</div>
+		<section class="contSelec oculto">
+			<button class="all">Show all</button>
+			<p>or</p>
+			<input type="text" name="buscar" list="busqueda">
+			<datalist id="busqueda">
+			</datalist>
+		</section>
 
-	<div class="contSelec oculto">
-		<button class="all">Show all</button>
-		<p>&nbsp;&nbsp;or&nbsp;&nbsp;</p>
-		<input type="text" name="buscar" list="busqueda">
-		<datalist id="busqueda">
-		</datalist>
-	</div>
-
-	<div class="contTabla">
-	</div>
+		<section class="contTabla">
+		</section>
+	</main>
 
 	<footer>
 		<p>2024 © <a href="https://github.com/Juan-CT">Juan-CT</a>

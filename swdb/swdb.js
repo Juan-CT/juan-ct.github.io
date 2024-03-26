@@ -51,47 +51,44 @@ document.addEventListener('DOMContentLoaded', function () {
 					divHeader.removeChild(pEnter);
 					divHeader.removeChild(input);
 					divHeader.appendChild(h3);
-					const divBotones = document.querySelector('body > div.botones').classList.toggle('oculto');
+					divHeader.querySelector('h3') ? document.querySelector('section.contBotones').classList.remove('oculto') : '';
 				}
 			})
 			if (localStorage.getItem('username') !== null) {
 				h3.textContent = localStorage.getItem('username') + ", may the force be with you.";
 				divHeader.appendChild(h3);
+				divHeader.querySelector('h3') ? document.querySelector('section.contBotones').classList.remove('oculto') : '';
 			} else {
 				divHeader.appendChild(label);
 				divHeader.appendChild(input);
 			}
-
-
 		})();
 
 		(function confBotones() {
-			const botones = document.querySelectorAll('body > div.botones > button');
+			const botones = document.querySelectorAll('div.botones > button');
 			botones.forEach(boton => {
 				boton.addEventListener('click', detectarCategoria);
 			})
-			const divHeader = document.querySelector('body > :first-child');
-			divHeader.querySelector('h3') ? document.querySelector('body > div.botones').classList.remove('oculto') : '';
 		})();
 
 		function detectarCategoria(e) {
 			let categoria = e.currentTarget.innerHTML.toLowerCase();
-			const divTabla = document.querySelector('body > div.contTabla');
+			const divTabla = document.querySelector('section.contTabla');
 			divTabla.innerHTML = "";
 			return peticion(categoria + "?page=1&limit=none");
 		}
 
 		function tratarDatos(datos) {
-			const divSelec = document.querySelector('body > div.contSelec');
+			const divSelec = document.querySelector('section.contSelec');
 			modDivSelec();
-			const divTabla = document.querySelector('body > div.contTabla');
+			const divTabla = document.querySelector('section.contTabla');
 			const arrObjs = datos.data;
 			const datosPorPagina = 10;
 			const maxPaginas = Math.ceil(arrObjs.length / datosPorPagina);
 
 			function modDivSelec() {
 				divSelec.classList.toggle('oculto', false);
-				const boton = document.querySelector('body > div.contSelec > button.all');
+				const boton = document.querySelector('button.all');
 				boton.addEventListener('click', () => {
 					if (divTabla.hasChildNodes) {
 						repintarTablaDiez(datosPagina(1), 1);
@@ -99,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
 						pintarTablaDiez(datosPagina(1), 1);
 					}
 				})
-				const inputBuscar = document.querySelector('body > div.contSelec > input');
+				const inputBuscar = document.querySelector('section.contSelec > input');
 				inputBuscar.placeholder = 'Search...';
 				inputBuscar.addEventListener('input', () => {
 					const valorBuscar = inputBuscar.value.toLowerCase();
@@ -187,6 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 				function crearTHead() {
 					const thead = crearNodo('thead');
+					const tr = crearNodo('tr');
 					const anterior = crearNodo('span');
 					pagina > 1 ? anterior.textContent = "Previous page" : "";
 					anterior.addEventListener('click', () => {
@@ -204,9 +202,10 @@ document.addEventListener('DOMContentLoaded', function () {
 					});
 					const thS = crearNodo('th');
 					thS.appendChild(siguiente);
-					thead.appendChild(thA);
-					thead.appendChild(thP);
-					thead.appendChild(thS);
+					tr.appendChild(thA);
+					tr.appendChild(thP);
+					tr.appendChild(thS);
+					thead.appendChild(tr);
 					return thead;
 				}
 			}
