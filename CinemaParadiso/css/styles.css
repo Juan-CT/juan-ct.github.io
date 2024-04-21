@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+:root {
+  --color-exito: #2ecc71;
+  --color-error: #e74c3c;
+  --color-fondo: #181822;
+}
+
+
+html { box-sizing: border-box; }
+* { box-sizing: inherit; }
+
+body {
+  background-color: var(--color-fondo);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+}
+
+body > div {
+  margin: 20px 0;
+}
+
+body > div > select {
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 5px 15px 5px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+body > ul .butaca:not(.ocupada):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+body > ul {
+  background: rgba(0, 0, 0, 0.716);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #777;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+body > ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+body > ul li small {
+  margin-left: 2px;
+}
+
+body > section {
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+body > section p span {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+body > section button {
+  display: block;
+  padding: 0.5em;
+  margin: 0 auto;
+  font-size: 1.1em;
+}
+
+.fila {
+  display: flex;
+  justify-content: center;
+}
+
+.pantalla {
+  background-color: #fff;
+  height: 110px;
+  width: 100%;
+  margin: 15px 0;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+.salas {
+  text-align: center;
+}
+
+.salas label {
+  margin-right: 10px;
+}
+
+.butaca, .butacaSala {
+  background-color: #444451;
+  height: 12px;
+  width: 15px;
+  margin: 3px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.butaca.seleccionada, .butacaSala.seleccionada {
+  background-color: #6feaf6;
+}
+
+.butaca.ocupada, .butacaSala.ocupada {
+  background-color: #fff;
+}
+
+.butacaSala:nth-of-type(4) {
+  margin-right: 18px;
+}
+
+.butacaSala:nth-last-of-type(4) {
+  margin-left: 18px;
+}
+
+.butacaSala:not(.ocupada):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.nomostrar {display:none;}
