@@ -17,7 +17,9 @@ export function processData(data) {
     data.salas.forEach(sala => {
       cinema.arrMovT.push(new MovTheater(
         sala.nombre,
-        sala.id
+        sala.id,
+        sala.filas,
+        sala.butacas
       ));
     });
 

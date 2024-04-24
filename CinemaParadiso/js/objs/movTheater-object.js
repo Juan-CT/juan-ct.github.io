@@ -1,31 +1,32 @@
 
 export class MovTheater {
 
-  seatsTemplate = this.rows();
-  
-
-  constructor(name, id) {
+  constructor(name, id, rows, seats) {
     this.name = name;
     this.id = id;
+    this.rows = rows;
+    this.seats = seats;
+    this.seatsTemplate = this.genRows();
   }
-
-  rows() {
+  
+  genRows() {
         
-    let template = ``;
-    for (let i = 0; i < 6; i++) {
+    let template = `<div class="filasButacas">`;
+    for (let i = 0; i < this.rows; i++) {
       template += `
-      <div class="fila">
-        ${this.seats()}
+      <div class="fila" id="${i+1}">
+        ${this.genSeats()}
       </div>
       `;
     }
-    return template;
+    return template + `</div>`;
   }
   
-  seats() {
+  genSeats() {
+    
     let seats = ``;
-    for (let s = 0; s < 16; s++) {
-      seats += `<div class="butacaSala"></div>`;
+    for (let s = 0; s < this.seats; s++) {
+      seats += `<div class="butacaSala id="${s+1}"></div>`;
     }
     return seats;
   }

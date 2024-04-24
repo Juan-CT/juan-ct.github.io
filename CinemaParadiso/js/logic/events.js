@@ -97,19 +97,20 @@ function inputsEvent(cinema) {
 
 // Event dedicated to highlight selected seats
 function selectSeat() {
-  const seats = document.querySelectorAll('.butacaSala');
-  seats.forEach(seat => {
-    seat.addEventListener('click', () => {
-      if (!seat.classList.contains('ocupada')) {
-        seat.classList.toggle('seleccionada');
+  const divContainerSeats = document.querySelector('.filasButacas');
+  divContainerSeats.addEventListener('click', (evt) => {
+    const seatClicked = evt.target;
+    if (seatClicked.classList.contains('butacaSala')) {
+      if (!seatClicked.classList.contains('ocupada')) {
+        seatClicked.classList.toggle('seleccionada');
         calcResult();
       }
-
-    })
+    }
   })
+    
 }
 
-// Event that calculates the price for the seats selected
+// Function that calculates the price for the seats selected
 function calcResult() {
   const seatsSelected = document.querySelectorAll('.seleccionada');
   const numSeats = document.querySelector('#count');
@@ -125,7 +126,7 @@ function calcResult() {
 
 }
 
-// Event that converts seats to occupied when bought
+// Event that converts seats to occupied when bought and saves
 function buySeats(cinema, movTSelected) {
   const buyButton = document.querySelector('#buy');
   
@@ -133,7 +134,7 @@ function buySeats(cinema, movTSelected) {
     const seatsSel = document.querySelectorAll('.butacaSala.seleccionada');
     seatsSel.forEach(seatTaken =>
       seatTaken.classList.replace('seleccionada', 'ocupada'));
-    saveResult(document.querySelectorAll('.fila'), cinema, movTSelected);
+    saveResult(document.querySelector('.filasButacas'), cinema, movTSelected);
   })
 }
 

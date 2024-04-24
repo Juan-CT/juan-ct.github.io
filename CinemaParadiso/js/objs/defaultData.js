@@ -1,70 +1,70 @@
 export const defaultData = {
    "salas":[
       {
-         "ocupadas":[ ],
-         "seleccionadas":[ ],
          "nombre":"Sala 1",
-         "id":1
+         "id":1,
+         "filas":8,
+         "butacas": 16
       },
       {
-         "ocupadas":[ ],
-         "seleccionadas":[ ],
          "nombre":"Sala 2",
-         "id":2
+         "id":2,
+         "filas":6,
+         "butacas": 12
       },
       {
-         "ocupadas":[ ],
-         "seleccionadas":[ ],
          "nombre":"Sala 3",
-         "id":3
+         "id":3,
+         "filas":4,
+         "butacas": 12
       },
       {
-         "ocupadas":[ ],
-         "seleccionadas":[ ],
          "nombre":"Sala 4",
-         "id":4
+         "id":4,
+         "filas":6,
+         "butacas": 12
       },
       {
-         "ocupadas":[ ],
-         "seleccionadas":[ ],
          "nombre":"Sala 5",
-         "id":5
+         "id":5,
+         "filas":10,
+         "butacas": 16
       },
       {
-         "ocupadas":[ ],
-         "seleccionadas":[ ],
          "nombre":"Sala 6",
-         "id":6
+         "id":6,
+         "filas":8,
+         "butacas": 12
       },
       {
-         "ocupadas":[ ],
-         "seleccionadas":[ ],
          "nombre":"Sala 7",
-         "id":7
+         "id":7,
+         "filas":4,
+         "butacas": 8
       },
       {
-         "ocupadas":[ ],
-         "seleccionadas":[ ],
          "nombre":"Sala 8",
-         "id":8
+         "id":8,
+         "filas":4,
+         "butacas": 8
       },
       {
-         "ocupadas":[ ],
-         "seleccionadas":[ ],
          "nombre":"Sala 9",
-         "id":9
+         "id":9,
+         "filas":6,
+         "butacas": 12
       },
       {
-         "ocupadas":[ ],
-         "seleccionadas":[ ],
          "nombre":"Sala 10",
-         "id":10
+         "id":10,
+         "filas":12,
+         "butacas": 16
       },
       {
-         "ocupadas":[ ],
-         "seleccionadas":[ ],
          "nombre":"Sala 11",
-         "id":11
+         "id":11,
+         "filas":15,
+         "butacas": 16
       }
    ],
    "peliculas":[

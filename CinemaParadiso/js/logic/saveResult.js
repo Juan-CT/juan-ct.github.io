@@ -2,15 +2,12 @@ import { saveData } from "./localeData.js";
 
 /* 
 This function creates a new row/seats template and records it in
-the specified movTheater
+the specified movTheater. After that, the new data is saved locally.
 */
 export function saveResult(result, cinema, movTName) {
-  let newSeatsTemplate = ``;
+  let newSeatsTemplate = `
+  <div class="filasButacas">` + result.innerHTML + `</div>`;
   
-  result.forEach(div => {
-    newSeatsTemplate += `<div class="fila">` + div.innerHTML + `</div>`;
-  });
-
   cinema.arrMovT.forEach(movT =>
     movT.name === movTName ?
     movT.seatsTemplate = newSeatsTemplate : null);
