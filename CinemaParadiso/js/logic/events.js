@@ -98,7 +98,10 @@ function inputsEvent(cinema) {
 // Event dedicated to highlight selected seats
 function selectSeat() {
   const divContainerSeats = document.querySelector('.filasButacas');
-  divContainerSeats.addEventListener('click', (evt) => {
+  divContainerSeats.addEventListener('click', alterSeat);
+  divContainerSeats.addEventListener('touchstart', alterSeat);
+
+  function alterSeat(evt) {
     const seatClicked = evt.target;
     if (seatClicked.classList.contains('butacaSala')) {
       if (!seatClicked.classList.contains('ocupada')) {
@@ -106,7 +109,7 @@ function selectSeat() {
         calcResult();
       }
     }
-  })
+  }
     
 }
 
