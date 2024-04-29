@@ -102,6 +102,7 @@ function selectSeat() {
   divContainerSeats.addEventListener('touchstart', alterSeat);
 
   function alterSeat(evt) {
+    evt.preventDefault();
     const seatClicked = evt.target;
     if (seatClicked.classList.contains('butacaSala')) {
       if (!seatClicked.classList.contains('ocupada')) {
