@@ -169,6 +169,7 @@ section {
 .boxHeader {
   text-align: justify;
   margin-bottom: 20px;
+  text-shadow: 2px 2px 4px #279177;
 }
 
 @media screen and (min-width: 768px) {
@@ -208,11 +209,50 @@ section {
 /* SECTION PROJECTS */
 
 .boxProjects {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.project {
+  width: 225px;  
+  margin-top: 20px;
+}
+
+.project > span {
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.projectLink {
+  display: block;
+  box-shadow: inset 0px 0px 2px 0px #279177;
+}
+.project > a > img {
+  display: inherit;
+  width: 100%;  
+  opacity: 0.6;  
+}
+
+.projectLink:hover,
+.projectLink:active {
+  box-shadow: 0px 0px 6px 0px #279177;
+}
+
+@media screen and (min-width:768px) {
+  .boxProjects {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* SECTION CONTACT */
+
+.boxContact {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
 
 /* FOOTER */
 
