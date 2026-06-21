@@ -1,30 +1,25 @@
-# Juan-CT's Portfolio v1.0
+# Juan-CT's Portfolio
 
-Welcome to my humble portfolio. This repository contains its basic structure, along with some of the projects I have created along the way to learn and improve my skills. For now, the portfolio is very simple, but I have the intention to make it more complex and add more projects in the future.
+This repository contains the published version of my portfolio site. I currently use it as a simple presentation page: a concise overview of who I am, what I work with, and a few projects that reflect part of my learning path.
 
 ## Main Page
 
-In the initial version, the index page structure is entirely built into the file, using HTML and CSS.
-No JavaScript or frameworks were used. The goal was to work directly with HTML elements and CSS.
+The current main page is intentionally minimal. Rather than building a more elaborate portfolio, I chose to keep it focused on the essentials: profile, stack, contact links, and selected projects.
+
+The site is currently published as a static build generated from an Angular application.
 
 ## Projects
 
-So far, my projects are mainly exercises from my vocational training, but extended with additional functionalities and polished.
+The projects linked from the portfolio were built earlier in my development journey. The code does not reflect my current standards, but each one achieved its goal at the time and helped me build experience.
 
 #### Star Wars DB
 
-This website was initially created to practice CSS and JavaScript for my exams. 
-After the exams, I added several lines to the script and many CSS properties to make the page responsive, along with some design improvements for a better appearance. 
-The code structure is a bit messy since my main focus was on practicing and getting things to work.
+A small browser for Star Wars data powered by the Star Wars Databank API.
 
 #### Cinema Paradiso
 
-This small project comes from an exercise I did for the JavaScript module I was in. 
-The information is saved locally, with no server, database or API involved.
-The JavaScript files are organized and separated into folders according to their function. 
-I aimed to simulate the structure of frameworks to gain practice in organization.
+A simple cinema seat selection exercise focused on interaction and state handling.
 
 #### Currency Converter
 
-I created this app to practice for the final exams of the JavaScript module. 
-The code is only in a single archive, but it is commented to make it easier to understand.
+A basic exchange calculator using live rates from the ExchangeRate API.

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
 
-	const URL = `https://starwars-databank-server.vercel.app/api/v1/`;
+	const URL = `https://starwars-databank-server.onrender.com/api/v1/`;
 
 	async function pedirDatos(url, tratarD, tratarE) {
 		try {
